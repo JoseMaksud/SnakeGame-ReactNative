@@ -100,7 +100,7 @@ const Game = () => {
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
             return;
         }
-        if (testEatFood(head, food)) {
+        if (testEatsFood(head, food)) {
             Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
             setFood(newFoodPosition(limits));
             setSnake([head, ...snake]);
@@ -119,7 +119,7 @@ const Game = () => {
         );
     }
 
-    function testEatFood(snakeHead, foodLocation) {
+    function testEatsFood(snakeHead, foodLocation) {
         return snakeHead.x == foodLocation.x && snakeHead.y == foodLocation.y;
     }
 
