@@ -141,12 +141,12 @@ const Game = () => {
                 top={insets.top}
                 score={score}
                 paused={isGamePaused}
-                pause={() => setIsGameOver((prev) => !prev)}
+                pause={() => setIsGamePaused((prev) => !prev)}
                 reload={() => setIsGameOver((prev) => !prev)}
                 />
                 <Board rows={ROWS} cols={COLS} top={insets.top} />
                 <Snake snake={snake} top={insets.top} />
-                {RandomFood}
+                { RandomFood }
         </SafeAreaView>
     </PanGestureHandler>
   )
