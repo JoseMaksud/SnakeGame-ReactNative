@@ -58,7 +58,7 @@ const Game = () => {
         }
     }, [snake, isGameOver, isGamePaused]);
 
-    function handleGesture(event) {
+    function handlerGesture(event) {
         const { translationX, translationY } = event.nativeEvent;
 
         if(Math.abs(translationX) > Math.abs(translationY)) {
@@ -135,7 +135,7 @@ const Game = () => {
     }, [food]);
 
   return (
-    <PanGestureHandler onGestureEvent={handleGesture}>
+    <PanGestureHandler onGestureEvent={handlerGesture}>
         <SafeAreaView style={styles.container}>
             <Header 
                 top={insets.top}
@@ -146,7 +146,7 @@ const Game = () => {
                 />
                 <Board rows={ROWS} cols={COLS} top={insets.top} />
                 <Snake snake={snake} top={insets.top} />
-                { RandomFood }
+                {RandomFood}
         </SafeAreaView>
     </PanGestureHandler>
   )

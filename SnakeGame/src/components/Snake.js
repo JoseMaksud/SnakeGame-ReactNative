@@ -27,7 +27,7 @@ const Snake = ({ snake, top }) => {
             };
             return (
                 <Animated.View 
-                    style={[{ position: "absolute"}, nodeStyle]}
+                    style={[{ position: "absolute" }, nodeStyle]}
                     key={index}
                 />
             );
